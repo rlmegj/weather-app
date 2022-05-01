@@ -23,3 +23,15 @@ button {
   box-shadow: none;
   display: inline;
 }
+
+footer {
+  font-size: 10px;
+  text-align: center;
+  margin: 0 auto;
+  font-family: cursive;
+  color: #385170;
+}
+
+a {
+  color: #385170;
+}
