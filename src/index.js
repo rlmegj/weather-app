@@ -11,14 +11,14 @@ function cityName(event) {
   axios.get(`${apiURL}&appid=${apiKey}`).then(showTemperature);
 }
 
-function location(position) {
-  position.preventDefault();
-  title = document.querySelector(".card-header");
-  let sentenceWeather = `On ${currentDay}, ${today} at ${currentTime}, the weather in is:`;
-  title.innerHTML = sentenceWeather;
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric`;
-  axios.get(`${apiURL}&appid=${apiKey}`).then(showTemperature);
-}
+//function location(position) {
+//position.preventDefault();
+//title = document.querySelector(".card-header");
+//let sentenceWeather = `On ${currentDay}, ${today} at ${currentTime}, the weather in is:`;
+//title.innerHTML = sentenceWeather;
+//let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric`;
+//axios.get(`${apiURL}&appid=${apiKey}`).then(showTemperature);
+//}
 
 function showTemperature(response) {
   let tempTodayDegrees = document.querySelector("#temperature-current");
@@ -27,7 +27,7 @@ function showTemperature(response) {
 }
 
 navigator.geolocation.getCurrentPosition(cityName);
-navigator.geolocation.getCurrentPosition(location);
+//navigator.geolocation.getCurrentPosition(location);
 
 let now = new Date();
 let days = [
@@ -73,5 +73,5 @@ title.innerHTML = sentence;
 let submit = document.querySelector("#search-form");
 submit.addEventListener("submit", cityName);
 
-let searchButtonCurrent = document.querySelector("#search-button-current");
-searchButtonCurrent.addEventListener("click", location);
+//let searchButtonCurrent = document.querySelector("#search-button-current");
+//searchButtonCurrent.addEventListener("click", location);
