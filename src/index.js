@@ -64,7 +64,7 @@ if (currentMinute < 10) {
 }
 let currentDate = now.getDate();
 let currentTime = `${currentHour}:${currentMinute}`;
-let today = `${currentMonth}, ${currentDate}`;
+let today = `${currentMonth} ${currentDate}`;
 let sentence = `What is the weather right now in...?`;
 
 let title = document.querySelector(".card-header");
